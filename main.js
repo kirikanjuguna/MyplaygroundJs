@@ -2,11 +2,11 @@ function kujaribu1() {
     document.getElementById("kujaribu").innerHTML = "The beautiful Journey begins";
 }
 
-function day(){
+function day() {
     document.getElementById("micasa").innerHTML.src="images/3d-rendering-cartoon-house (1).gif";
 }
 
-function night(){
+function night() {
     document.getElementById("micasa").innerHTML.src="images/3d-rendering-cartoon-house.gif";
 }
 
