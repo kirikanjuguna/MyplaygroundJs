@@ -8,11 +8,11 @@ function headi() {
 
 
 function day() {
-    document.getElementById("house-img").innerHTML.src="images/3d-rendering-cartoon-house (1).gif";
+    document.getElementById("house").innerHTML.src = "images/3d-rendering-cartoon-house (1).gif";
 }
 
 function night() {
-    document.getElementById("house-img").innerHTML.src="images/3d-rendering-cartoon-house.gif";
+    document.getElementById("house").innerHTML.src = "images/3d-rendering-cartoon-house.gif";
 }
 //spent a day looking for what the error could be only to find out that the id i was using was for the whole div
 
