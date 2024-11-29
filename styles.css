@@ -11,3 +11,45 @@ img{
     background-color: red;
     font-size: 50px;
 }
+
+/*General Button Styling*/
+.styled-button {
+    background-color: #4CAF50; /* Green background */
+    border: none; /* Remove default border */
+    color: white; /* White text */
+    padding: 12px 24px; /* Padding for size */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Keep as an inline element */
+    font-size: 16px; /* Adjust text size */
+    font-weight: bold; /* Make text bold */
+    border-radius: 8px; /* Round corners */
+    transition: 0.3s; /* Add smooth transition */
+    cursor: pointer; /* Add pointer on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+
+}
+/* Day Button Specific Styles */
+.day-button {
+    background-color: pink; /* Pink for Day */
+    color: black;
+}
+
+/* Night Button Specific Styles */
+.night-button {
+    background-color: black; /* Black for Night */
+
+}
+
+/* Hover Effects */
+.styled-button:hover {
+    transform: translateY(-3px); /* Lift up slightly */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhance shadow */
+}
+
+/* Active State */
+.styled-button:active {
+    transform: translateY(0); /* Reset position */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Reset shadow */
+    opacity: 0.9; /* Slight transparency */
+}
