@@ -12,6 +12,9 @@ img{
     font-size: 50px;
 }
 
+.headi {
+padding-bottom: 12px;
+}
 /*General Button Styling*/
 .styled-button {
     background-color: #4CAF50; /* Green background */
