@@ -20,3 +20,18 @@ function learn() {
     document.getElementById("yy").innerHTML = x;
 }
 
+const  man = {
+    firstName: "Jacob",
+}
+
+man.lastName = "Murphy";
+man.height = 180;
+man.eyeColor = "Brown";
+man.Age = 23;
+man.fullName = trial();
+document.getElementById("yy").innerHTML = man.fullName;
+
+function trial() {
+    return this.firstName + " " + this.lastName;
+    
+};
