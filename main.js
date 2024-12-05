@@ -21,17 +21,15 @@ function learn() {
 }
 
 const  man = {
-    firstName: "Jacob",
+    firstName:"Jacob",
 }
 
 man.lastName = "Murphy";
 man.height = 180;
 man.eyeColor = "Brown";
 man.Age = 23;
-man.fullName = trial();
-document.getElementById("yy").innerHTML = man.fullName;
-
-function trial() {
+man.fullName = function() {
     return this.firstName + " " + this.lastName;
     
 };
+document.getElementById("yy").innerHTML = man.fullName();
