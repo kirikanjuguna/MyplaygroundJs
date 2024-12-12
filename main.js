@@ -32,4 +32,5 @@ man.fullName = function() {
     return this.firstName + " " + this.lastName;
     
 };
-document.getElementById("yy").innerHTML = man.fullName();
+
+document.getElementById("yy").innerHTML = man();
