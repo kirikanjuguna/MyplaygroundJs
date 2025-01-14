@@ -1,4 +1,4 @@
-// Create an Object
+/*// Create an Object
 const personDetails = {
     name: "John",
     age: 30,
@@ -15,4 +15,11 @@ const personDetails = {
 
   function changeh2() {
     document.getElementById("changeh2").innerHTML = text;
-}
+}*/
+
+//reminding myself about objects
+const person = {
+  name : "John",
+  age: 29,
+  City:"Berlin",
+};
