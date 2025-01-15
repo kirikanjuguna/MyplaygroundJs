@@ -19,7 +19,13 @@ const personDetails = {
 
 //reminding myself about objects
 const person = {
-  name : "John",
+  fname : "John",
+  lname : "Hopkins",
   age: 29,
   City:"Berlin",
+  fullname: function(){
+    return this.fname+ " "+ this.lname;
+  },
 };
+
+document.getElementById("print").innerHTML = person.fullname() + " " + person.City;
