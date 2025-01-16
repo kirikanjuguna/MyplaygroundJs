@@ -28,4 +28,4 @@ const person = {
   },
 };
 
-document.getElementById("print").innerHTML = person.fullname() + " " + person.City;
+document.getElementById("print").innerHTML = person.fullname() + " " + person.City + " " + person.age;
