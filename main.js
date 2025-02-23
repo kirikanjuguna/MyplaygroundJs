@@ -49,3 +49,48 @@ man.fullName = function() {
 
 document.getElementById("yy").innerHTML = man.firstName() + " " + man.lastName();//object properties displayed as a string
 
+//Geolocation API
+const x = document.getElementById("locatonyangu");
+
+function getLocation() {
+    if (navigator.geolocation)
+{
+    navigator.geolocation.getCurrentPosition(showPosition);
+} else{
+    x.innerHTML = "Buda this shit is not supported in your browser!!";
+}
+}
+
+function showPosition(position) {
+let latitude = position.coords.latitude;
+let longitude = position.coords.longitude;
+
+//using OpenStreetMap to get place name
+fetch(`https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=json`)
+.then(Response => response.json())
+.then(data => {
+    let place = data.display_name;
+    x.innerHTML = `You are in: <strong>${place}</strong> 🌍`;
+    })
+.catch(error => {
+    x.innerHTML = "Sorry, could not find the place name! 😢";
+    console.error("Error:", error);
+    });
+}
+
+//Handling errors
+function showError(error) {
+    switch(error.code) {
+        case error.PERMISSION_DENIED:
+            x.innerHTML = "Buda, allow location access first! 🙄";
+            break;
+        case error.POSITION_UNAVAILABLE:
+            x.innerHTML = "Location info not available. 🤷‍♂️";
+            break;
+        case error.TIMEOUT:
+            x.innerHTML = "Request timed out. Try again. ⏳";
+            break;
+        default:
+            x.innerHTML = "Something went wrong. 😕";
+    }
+}
