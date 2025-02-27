@@ -22,6 +22,7 @@ function learn() {
 
 const  man = {
     firstName:"Jacob",
+    isemployed: true,
 }
 
 man.lastName = "Murphy";
@@ -33,7 +34,11 @@ man.fullName = function() {
     
 };
 
-document.getElementById("yy").innerHTML = man();
+const meeehn = JSON.stringify(man); 
+//document.getElementById("yy").innerHTML = meeehn; //using json.stringify
+
+const paaaa = Object.values(man); //can either be object keys or values
+document.getElementById("yy").innerHTML = paaaa;
 //How is thuis supposed to display an object??
 //Maybe a loop can be used to dispay the properties or the object poperties can be displayed as strings 
 //Otherwise the result will be [Object][object]
@@ -42,6 +47,7 @@ man.lastName = "Murphy";
 man.height = 180;
 man.eyeColor = "Brown";
 man.Age = 23;
+
 man.fullName = function() {
     return this.firstName + " " + this.lastName;
     
