@@ -21,39 +21,45 @@ function learn() {
 }
 
 const  man = {
-    firstName:"Jacob",
+    FirstName:"Jacob",
     isemployed: true,
 }
 
-man.lastName = "Murphy";
-man.height = 180;
-man.eyeColor = "Brown";
+man.LastName = "Murphy";//Adding keys and values
+man.Height = 180;
+man.EyeColor = "Brown";
 man.Age = 23;
-man.fullName = function() {
-    return this.firstName + " " + this.lastName;
+man.FullName = function() {
+    return this.FirstName + " " + this.LastName;
     
 };
 
-const meeehn = JSON.stringify(man); 
-//document.getElementById("yy").innerHTML = meeehn; //using json.stringify
 
-const paaaa = Object.values(man); //can either be object keys or values
-document.getElementById("yy").innerHTML = paaaa;
+//from here a series of code for DISPLAYING OBJECTS IN JS
 //How is thuis supposed to display an object??
 //Maybe a loop can be used to dispay the properties or the object poperties can be displayed as strings 
 //Otherwise the result will be [Object][object]
 //Here is a example
-man.lastName = "Murphy";
-man.height = 180;
-man.eyeColor = "Brown";
-man.Age = 23;
 
-man.fullName = function() {
-    return this.firstName + " " + this.lastName;
-    
+//document.getElementById("yy").innerHTML = man.firstName() + " " + man.lastName();//object properties displayed as a string
+
+//const meeehn = JSON.stringify(man); //same for Object.entries
+//document.getElementById("yy").innerHTML = meeehn; //using json.stringify
+
+//const paaaa = Object.values(man); //can either be object keys or values
+//document.getElementById("yy").innerHTML = paaaa;
+//How is thuis supposed to display an object??
+//Maybe a loop can be used to dispay the properties or the object poperties can be displayed as strings 
+//Otherwise the result will be [Object][object]
+//Here is a example
+
+//Displaying by for in
+let forrin = "";
+for (let key in man) {
+    forrin += key + ": " + man[key] + "<br>";
 };
 
-document.getElementById("yy").innerHTML = man.firstName() + " " + man.lastName();//object properties displayed as a string
+document.getElementById("yy").innerHTML = man.FullName();
 
 //Geolocation API
 const x = document.getElementById("locatonyangu");
