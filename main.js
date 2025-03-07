@@ -77,17 +77,17 @@ A method getPhoneInfo() to return "Brand: [brand], Model: [model], Price: [price
 Then create three objects using the constructor and display their info!*/
 
 
-function Mobilephone (brand, model, price, ){
-this.brand = brand,
-this.model = model,
-this.price = price
+function Mobilephone (brand, model, price ){
+this.brand = brand;
+this.model = model;
+this.price = price;
 this.getPhoneInfo = function() {
 return "Brand: " + this.brand + "Model: " + this.model +"Price: " + this.price;
 };
 };
-const Iphone = New.Mobilephone = ("Apple","iphone 12", 1200);
-const Galaxy = New.Mobilephone = ("Samsung","Galaxy 6", 1400);
-const Phantom = New.Mobilephone = ("Techno","PhantomZE", 400);
+const Iphone = new Mobilephone ("Apple","iphone 12", 1200);
+const Galaxy = new Mobilephone ("Samsung","Galaxy 6", 1400);
+const Phantom = new Mobilephone("Techno","PhantomZE", 400);
 
 document.getElementById("phone").innerHTML= Iphone.price;
 
