@@ -61,6 +61,39 @@ for (let key in man) {
 
 document.getElementById("yy").innerHTML = man.FullName();
 
+
+
+
+
+//CONSTRUCTORS
+/*🚀 Challenge for You
+
+Try creating a constructor for a Mobile Phone, with properties like:
+
+brand
+model
+price
+A method getPhoneInfo() to return "Brand: [brand], Model: [model], Price: [price]".
+Then create three objects using the constructor and display their info!*/
+
+
+function Mobilephone (brand, model, price, ){
+this.brand = brand,
+this.model = model,
+this.price = price
+this.getPhoneInfo = function() {
+return "Brand: " + this.brand + "Model: " + this.model +"Price: " + this.price;
+};
+};
+const Iphone = New.Mobilephone = ("Apple","iphone 12", 1200);
+const Galaxy = New.Mobilephone = ("Samsung","Galaxy 6", 1400);
+const Phantom = New.Mobilephone = ("Techno","PhantomZE", 400);
+
+document.getElementById("phone").innerHTML= Iphone.price;
+
+
+
+
 //Geolocation API
 const x = document.getElementById("locatonyangu");
 
