@@ -89,7 +89,19 @@ const Iphone = new Mobilephone ("Apple","iphone 12", 1200);
 const Galaxy = new Mobilephone ("Samsung","Galaxy 6", 1400);
 const Phantom = new Mobilephone("Techno","PhantomZE", 400);
 
-document.getElementById("phone").innerHTML= Iphone.price;
+let myphone = "";
+
+for (let [key, values] of Object.entries(Iphone)){ //i have to write an if else to display the the method normally too
+if (typeof values === "function") {
+    myphone += key + ": " + values() + "<br>" ;//only way to display methods is to specify
+} else {
+    myphone += key + ": " + values + "<br>" ;
+}
+
+
+};
+
+document.getElementById("phone").innerHTML= myphone;
 
 
 
