@@ -151,3 +151,12 @@ function showError(error) {
             x.innerHTML = "Something went wrong. 😕";
     }
 }
+
+
+//Arrays
+let fruits = ["apple", "Banana", "Orange"];
+console.log(fruits);
+
+function matunda() {
+document.getElementById("heh") = fruits.join;
+};
