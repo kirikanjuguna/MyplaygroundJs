@@ -15,7 +15,7 @@ console.log(typeof age);
 console.log(typeof isEmployed);
 
 //5.Write a function called introduce that logs a sentence using all three variables — e.g. "Hi, I'm Edwin, I'm 25, employed: false".
-function introduce () {
+function introduceone () {
  console.log("Hi, i'm" + fullName + "i'm" + age + " and i'm" + isEmployed  )
 };
 
@@ -25,7 +25,7 @@ function introduce () {
  console.log(`Hi, i'm ${fullName}, i'm ${age}, and i'm ${isEmployed}`);
 };
 
-console.log(secret);
+//console.log(secret); //COMMENTING THIS OUT FOR JS TO KEEP RUNNING
 // i think this wont work because secret is declared inside the fuction and therefore its has a local scope and it can't be logged outside the the fuction
 
 //7.Write the "5" + 1 and 5 - "1" examples yourself, log both, and write a comment explaining what happened in each case.
@@ -42,4 +42,5 @@ console.log(5 - "1");//here the answer is gonna be 4 because the string is gonna
   };
   console.log(add(x,y));
   console.log(add(x,"10"));
+  console.log(add("11",y))
 
