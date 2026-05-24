@@ -34,7 +34,6 @@ man.FullName = function() {
     
 };
 
-
 //from here a series of code for DISPLAYING OBJECTS IN JS
 //How is thuis supposed to display an object??
 //Maybe a loop can be used to dispay the properties or the object poperties can be displayed as strings 
