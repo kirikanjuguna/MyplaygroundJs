@@ -154,3 +154,24 @@ const describeNumber = (number) => {
 console.log(describeNumber(5));
 console.log(describeNumber(-3));
 console.log(describeNumber(0));
+
+
+/////Day 3: Arrays and Loops — where real data lives
+//Learning
+//Arrays
+const fruits = ["apple", "banana", "Mango"]
+
+console.log(fruits[0]) //yees i was aware of zero indexing
+console.log(fruits.length)
+//trying out adding and removing
+const names = ["Edwin" , "Alice"]
+names.push("Mwangi")
+console.log(names)
+names.pop()
+console.log(names)
+names.unshift("Vinai")
+console.log(names)
+names.shift()
+console.log(names)
+
+//The for loop 
