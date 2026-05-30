@@ -175,3 +175,16 @@ names.shift()
 console.log(names)
 
 //The for loop 
+const numbers = [10, 20, 30]
+for (let i=0;i<numbers.length;i++){ //i think you made a mistake here// well you just wrote the for loop for me i didn't really understand it  so i just crammed  it and was wrote it all over again(and it worked) because i didn't understand why we are doing what
+  console.log(numbers[i])
+}
+
+//the for...of loop
+const cities = ["Nairobi", "Mombasa", "Kisumu"]
+  for (const city of cities) {
+    console.log(city) //tried putting cities here and it printed the whole array thrice i was just curious
+  }
+
+  //The big three array methods — these are everywhere in React
+  
