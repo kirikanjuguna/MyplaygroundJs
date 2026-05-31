@@ -187,4 +187,14 @@ const cities = ["Nairobi", "Mombasa", "Kisumu"]
   }
 
   //The big three array methods — these are everywhere in React
-  
+
+const numbersForMethods = [1, 2, 3, 4, 5]
+//.map()
+const numbersForMethodsDouble = numbersForMethods.map(n => n*2)
+  console.log(numbersForMethodsDouble) //after logging it like this i realised it doesn't change the original array because i tried to log numbersForMethods and it showed the original array
+//.filter()
+const numbersForMethodsEven = numbersForMethods.filter(n => n%2 ===0) //i didn't know what === meant but i've researched and found out so in short we are looking for number whose reminders are 0 when you divide by 2
+  console.log(numbersForMethodsEven)
+//.find()
+const bigBig = numbersForMethods.find(n => n>2)
+  console.log(bigBig) 
