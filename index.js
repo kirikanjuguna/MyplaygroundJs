@@ -181,9 +181,9 @@ for (let i=0;i<numbers.length;i++){ //i think you made a mistake here// well you
 }
 
 //the for...of loop
-const cities = ["Nairobi", "Mombasa", "Kisumu"]
-  for (const city of cities) {
-    console.log(city) //tried putting cities here and it printed the whole array thrice i was just curious
+const KenyanCities = ["Nairobi", "Mombasa", "Kisumu"]
+  for (const KenyanCity of KenyanCities) {
+    console.log(KenyanCity) //tried putting cities here and it printed the whole array thrice i was just curious
   }
 
   //The big three array methods — these are everywhere in React
@@ -198,3 +198,59 @@ const numbersForMethodsEven = numbersForMethods.filter(n => n%2 ===0) //i didn't
 //.find()
 const bigBig = numbersForMethods.find(n => n>2)
   console.log(bigBig) 
+
+
+//////////EXERCISES
+////Day 3 Exercise — new file: day3.js No notes. No looking back. Run with node day3.js.
+///Part A — array basics
+
+//1.Create an array of 5 city names. Log the first and last item using their index. Log the total number of items.
+const cities = ["London", "Berlin", "Madrid", "Rome", "Paris"]
+  console.log(cities[0])
+  console.log(cities[4])
+  console.log(cities.length)
+//2.Add a city to the end. Remove the first city. Log the array after each change.
+cities.push("Nairobi")//Add a city to the end
+console.log(cities)
+cities.shift()//Remove the first city
+console.log(cities)
+
+///Part B — loops
+//3.Use a classic forloop to log each city with its index number. Format: "0: Nairobi", "1: Berlin" etc.
+for (let i=0; i<cities.length; i++){
+  console.log(i + ":" + cities[i])
+}
+//4.Use a for...of loop to log each city in uppercase. Hint: strings have a .toUpperCase() method.
+for(const city of cities){ //added const here
+  console.log(city.toUpperCase())
+}
+///Part C — map, filter, find
+//5.Create an array of numbers:[3, 7, 12, 5, 19, 2, 8] . Use map to create a new array where every number is multiplied by 10. Log both arrays — the original should be unchanged.
+const numbersForTest = [3, 7, 12, 5, 19, 2, 8]
+const numbersForTestMapped =  numbersForTest.map(n=>n*10)
+console.log(numbersForTest)
+console.log(numbersForTestMapped)
+//6.Use filter on the same array to get only numbers greater than 6.
+const numbersForTestFiltered = numbersForTest.filter(n=>n>6)
+console.log(numbersForTestFiltered)
+//7.Use find to get the first number greater than 10.
+const numbersForTestFind = numbersForTest.find(n=>n>10)
+console.log(numbersForTestFind)
+///Part D — combine everything
+//8.Create an array of 5 people's ages:[14, 22, 17, 31, 16]. Use filter and your isAdult function from Day 2 to get only the adults. Log the result.
+const peopleAges = [14, 22, 17, 31, 16] //change from pascal case
+function isAdult(peopleAges) {
+  return peopleAges >= 18;
+}
+const adults = peopleAges.filter(isAdult)
+console.log(adults)
+
+//Bonus
+//★Use map on the ages array to return an array of strings — "Edwin is an adult" or "Edwin is a minor" for each age. You don't have real names so just use the age itself: "22 is an adult", "14 is a minor". Combine
+
+//lemme try now with ternary
+const listOfAdultsAndMinors = peopleAges.map(peopleAge =>{
+  return isAdult(peopleAge)? `${peopleAge} is an adult` : `${peopleAge} is a minor`
+}
+)
+console.log(listOfAdultsAndMinors)
