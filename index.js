@@ -254,3 +254,62 @@ const listOfAdultsAndMinors = peopleAges.map(peopleAge =>{
 }
 )
 console.log(listOfAdultsAndMinors)
+
+
+
+/////Day 4: Objects — the most important data structure in JavaScript
+
+/////Learning
+const user ={
+  name: "Edwin",
+  age: 26,
+  isEmployed: false,
+  greet(){
+    return `Hello ${this.name} i'm from ${this.cityOfResidence}`
+  },
+  address: {
+    city: "Nairobi",
+    country: "Kenya"
+  }
+}
+//Reading from objects
+//lemme try the dot notation
+console.log(user.name)
+////and now bracket notation
+console.log(user[age])//did this and got 26
+console.log(user["age"])//did this and got false
+
+// But i seee for you you have declared a variable key and defined it as name the logged it with bracket annotation
+const key = 'age'
+console.log(user[key])//did this and got 26.    //So out of all this explain to me why what is right and what i should use 
+
+//updating and adding properties
+user.name = "Kirika"
+user.cityOfResidence = "Nairobi"
+
+console.log(user) //Nice they worked the object has been updated 
+//oooooh shit hadn't noticed that we used const to declare user but its contents can change
+
+console.log(user[greet()])//this didn't work lemme now try dot notation
+console.log(user.greet()) //Yees this worked also added another property in the function to see how it works
+console.log(user.address.city)//it worked
+
+const {address} = user //trying destructuring
+console.log(address)
+
+//Arrays of objects 
+const iphoneUsers = [
+  { name: "Alice", age: 30, city: "New York" },
+  { name: "Bob", age: 25, city: "San Francisco" },
+  { name: "Charlie", age: 16, city: "Los Angeles" }
+]
+
+//get all the names
+const iphoneUserNames = iphoneUsers.map(iphoneUsers => {
+  return iphoneUsers.name
+})
+  console.log(iphoneUsers)
+  console.log(iphoneUserNames)
+
+  const adultIphoneUsers = iphoneUsers.filter(iphoneUsers => iphoneUsers.age >=18) 
+    console.log(adultIphoneUsers) //yees it worked
