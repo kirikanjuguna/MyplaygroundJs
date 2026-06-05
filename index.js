@@ -276,7 +276,7 @@ const user ={
 //lemme try the dot notation
 console.log(user.name)
 ////and now bracket notation
-console.log(user[age])//did this and got 26
+console.log(user[age])//did this and got 26 //Now i get this 
 console.log(user["age"])//did this and got false
 
 // But i seee for you you have declared a variable key and defined it as name the logged it with bracket annotation
@@ -313,3 +313,81 @@ const iphoneUserNames = iphoneUsers.map(iphoneUsers => {
 
   const adultIphoneUsers = iphoneUsers.filter(iphoneUsers => iphoneUsers.age >=18) 
     console.log(adultIphoneUsers) //yees it worked
+
+
+
+
+
+  /////Day 4 Exercise 
+///Part A — build and read an object
+//1.Create an object called profile with these properties:name (your name),age,city,isEmployed. Log the whole object, then log each property individually using dot notation.
+const profile = { //the profile object
+  profileName: "Edwin",
+  profileAge: 25, // changed this to profileAge to avoid conflicts
+  isEmployed: false
+}
+console.log(profile)//logging the profile
+console.log(profile.profileName) //logging the name
+console.log(profile.profileAge) //logging the age
+console.log(profile.isEmployed) //logging the employment status
+
+//2.Add a new property country to the object after it's been created. Update isEmployed to true . Log the updated object.
+profile.country = "Kenya" //adding the new property country
+profile.isEmployed = true //changing the isEmplyed value
+console.log(profile)
+////Part B — methods and this
+//3.Add a method called introduce to your profile object. It should return a string: "Hi, I'm [name], I'm [age], from [city]." — using this to access the properties. Call it and log the result.
+profile.city = "Mombasa"
+profile.introduce = function() { //i was thinking i should have done something like profile.introduce = introduce() { but i think thats wrong tell me//Get it now
+  return `Hi, I'm ${this.profileName}, I'm ${this.profileAge} from ${this.city}` //there is no city property but i answered what you asked //actually i've added city
+}//hope i'm right with this one fingers crossed
+console.log(profile.introduce())
+console.log(profile) //why is it when i ran this it shows introduction like this introduce: [Function (anonymous)] //yes i got it  this is how node js displays functions that are properties inside objects
+
+
+////Part C — destructuring
+//4.Destructure name, age, and city from your profile object into standalone variables. Log each one.
+const {profileName, profileAge, city} =profile
+console.log(profileName)
+console.log(profileAge)
+console.log(city)
+
+//5.Write a function displayUser that takes a user object as a parameter, destructures the name and age inside the function, and returns "User: [name], Age: [age]".
+function displayUser(profile) { //i had made a mistake here and put an equal sign between) and { and i was getting a red line so i removed it
+const {profileName, profileAge} = profile
+ return `User:${profileName}, Age:${profileAge}`
+}
+console.log(displayUser(profile)) //You didn't tell me me when logging a function you have to specify the parameters as well
+////Part D — arrays of objects (the real world)
+//6. Create an array called users with 4 objects. Each object should have name, age, and city. Use different values — mix adults and minors.
+const dayThreeUsers = [
+  { profileName: "Alice", profileAge: 30, city: "New York" },
+  { profileName: "Bob", profileAge: 25, city: "San Francisco" },
+  { profileName: "Charlie", profileAge: 16, city: "Los Angeles" },
+  { profileName: "David", profileAge: 17, city: "Berlin" }
+]
+//7.Use map to get an array of just the names. Log it.
+const dayThreeUsersNames = dayThreeUsers.map(UserNames => UserNames.profileName)//dayThreeUsersNames = dayThreeUsers.map(dayThreeUsersNames => dayThreeUsers.profileName) This didn't work why??? it soed for objects with undefined
+console.log(dayThreeUsersNames)
+
+//8.Use filter to get only users who are 18 or over. Log the result.
+const dayThreeAdults = dayThreeUsers.filter(dayThreeUsers => dayThreeUsers.profileAge >=18  //i did this but i think i have to really really practice structure of this functiopns to really really master what every part of the functions stand for
+) 
+console.log(dayThreeAdults)
+//9.Use find to get the first user from "Berlin". Log their name.
+dayThreeFromBerlin = dayThreeUsers.find(dayThreeUsers => dayThreeUsers.city === "Berlin") //it worked 
+console.log(dayThreeFromBerlin)
+
+//////Bonus — nested objects ★ Add an address property to one of your users. It should be an object itself with street, city, and country . Log that user's city using chained dot notation. Then destructure just the city from the nested address.
+dayThreeUsers[0].address = {
+  street: "The kasa street",  //not sure if i've done the right thing here
+  city: "New York",
+  country: "USA"
+}
+
+console.log(dayThreeUsers[0].address.city) //Logged that user's city using chained dot notation
+
+const { city:dayThreeCity } = dayThreeUsers[0].address ///proper destructuring
+console.log(dayThreeCity)
+
+//On the naming of properties i understand i just had to do what i had to do avoid conflicts with naming //i'm glad that you said we'll solve that later
