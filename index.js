@@ -391,3 +391,11 @@ const { city:dayThreeCity } = dayThreeUsers[0].address ///proper destructuring
 console.log(dayThreeCity)
 
 //On the naming of properties i understand i just had to do what i had to do avoid conflicts with naming //i'm glad that you said we'll solve that later
+
+const octopus = {
+  name: "Njuguna",
+  getName(){
+    return this.name //confirmed how important this. is because i did it with and without this
+  }
+}
+console.log(octopus.getName())
