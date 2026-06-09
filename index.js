@@ -399,3 +399,24 @@ const person = {
   }
 }
 console.log(person.getName())
+
+//Day 5: How Functions Really Work — Closures & Callbacks
+function makeCounter(){
+  let count = 0
+  return function(){ //i travelled home and i'm writing this from i really don't understand this code 
+    count ++
+    return count
+  }
+}
+
+const closure = makeCounter()
+const counterObjects =
+  {listOfClosures(){
+    return console.log(closure())},
+
+   listOfClosuresTwo(){
+    return console.log(closure())}//wanted to just  play around with what i have learned and i created an object of the functions
+  }
+console.log(counterObjects.listOfClosures()) // this printed 1 with undefined below it 
+console.log(counterObjects.listOfClosures()) //and this printed 2 with undefined below it
+
