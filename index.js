@@ -401,7 +401,7 @@ const person = {
 console.log(person.getName())
 
 //Day 5: How Functions Really Work — Closures & Callbacks
-function makeCounter(){
+/*function makeCounter(){
   let count = 0
   return function(){ //i travelled home and i'm writing this from i really don't understand this code 
     count ++
@@ -418,5 +418,15 @@ const counterObjects =
     return console.log(closure())}//wanted to just  play around with what i have learned and i created an object of the functions
   }
 console.log(counterObjects.listOfClosures()) // this printed 1 with undefined below it 
-console.log(counterObjects.listOfClosures()) //and this printed 2 with undefined below it
+console.log(counterObjects.listOfClosures()) //and this printed 2 with undefined below it */
 
+function makeCounter(){
+  let count = 0
+  return function(){
+    count++
+    return count
+  }
+}
+const result = makeCounter()
+console.log(result())
+console.log(result())
