@@ -430,3 +430,4 @@ function makeCounter(){
 const result = makeCounter()
 console.log(result())
 console.log(result())
+console.log(result())
