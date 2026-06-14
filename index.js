@@ -420,14 +420,12 @@ const counterObjects =
 console.log(counterObjects.listOfClosures()) // this printed 1 with undefined below it 
 console.log(counterObjects.listOfClosures()) //and this printed 2 with undefined below it */
 
-function makeCounter(){
+function makeCounter() {
   let count = 0
-  return function(){
-    count++
+  return function() {
+    count ++
     return count
   }
 }
-const result = makeCounter()
-console.log(result())
-console.log(result())
+let result = makeCounter()
 console.log(result())
