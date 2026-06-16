@@ -429,3 +429,16 @@ function makeCounter() {
 }
 let result = makeCounter()
 console.log(result())
+
+//Tried a cookie jar example to understand Closures more
+function makeCookiejar() {
+  let cookies = 10
+  return function() {
+    cookies--
+    return cookies
+  }
+}
+const eatCookie = makeCookiejar()
+console.log(eatCookie())
+console.log(eatCookie())
+console.log(eatCookie())
