@@ -431,15 +431,25 @@ let result = makeCounter()
 console.log(result())
 
 //Tried a cookie jar example to understand Closures more
-function makeCookiejar() {
+function cookieJar() {
   let cookies = 10
-  return function() {
+  return function (){
     cookies--
     return cookies
   }
 }
-const eatCookie = makeCookiejar()
-console.log(eatCookie())
-console.log(eatCookie())
-console.log(eatCookie())
-console.log(eatCookie())
+const EatCookies = cookieJar()
+console.log(EatCookies())
+console.log(EatCookies())
+console.log(EatCookies())
+console.log(EatCookies())
+
+//Lemme try the Multiplier factory
+function multiplyBy(factor){
+  return number => number * factor  
+}
+const secondDouble = multiplyBy(2)
+const secondTriple = multiplyBy(3)
+
+console.log(secondDouble(10))
+console.log(secondTriple(6))
