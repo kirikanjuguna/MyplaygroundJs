@@ -444,3 +444,12 @@ console.log(EatCookies())
 console.log(EatCookies())
 console.log(EatCookies())
 
+//multiplier factory
+function multiplyBy(factor) {
+  return number => number * factor
+}
+
+const double = multiplyBy(2)
+const triple = multiplyBy(3)
+
+console.log (double(6))
