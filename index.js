@@ -449,7 +449,8 @@ function multiplyBy(factor) {
   return number => number * factor
 }
 
-const doubleNew = multiplyBy(2)
-const tripleNew = multiplyBy(3)
+const newDouble = multiplyBy(2)
+const newTriple = multiplyBy(3)
 
-console.log (double(6))
+console.log(newDouble(6))
+console.log(newTriple(6))
