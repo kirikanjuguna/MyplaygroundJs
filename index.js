@@ -444,9 +444,9 @@ console.log(EatCookies())
 console.log(EatCookies())
 console.log(EatCookies())
 
-//multiplier factory
+//muliplier factory
 function multiplyBy(factor) {
-  return number => number * factor
+  return (number) => number * factor
 }
 
 const newDouble = multiplyBy(2)
@@ -454,3 +454,4 @@ const newTriple = multiplyBy(3)
 
 console.log(newDouble(6))
 console.log(newTriple(6))
+
