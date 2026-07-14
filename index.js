@@ -452,8 +452,10 @@ function multiplyBy(factor) {
 const newDouble = multiplyBy(2)
 const newTriple = multiplyBy(3)
 const quadruple = multiplyBy(4)
+const quintuple = multiplyBy(5)
 
 console.log(newDouble(6))
 console.log(newTriple(6))
 console.log(quadruple(6))
+console.log(quintuple(6))
 
