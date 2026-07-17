@@ -459,17 +459,12 @@ console.log(newTriple(6))
 console.log(quadruple(6))
 console.log(quintuple(6))
 
-callbacks
-
-function doSomething(callback) {
-  // Simulate an asynchronous operation
-  setTimeout(() => {
-    const result = 42
-    callback(result)
-  }, 1000)
+//callbacks
+function greetUser(name, callback) {
+  const message = `Hello` + name
+  callback(message)
 }
 
-doSomething((data) => {
-  console.log("Received data:", data)
+greetUser("Edwin", (message) => {
+  console.log(message)
 })
-
