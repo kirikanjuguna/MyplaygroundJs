@@ -459,12 +459,11 @@ console.log(newTriple(6))
 console.log(quadruple(6))
 console.log(quintuple(6))
 
-//callbacks
-function greetUser(name, callback) {
-  const message = `Hello` + name
-  callback(message)
+//callback 
+function greetUser(name, message) {
+  const message =  `Hello + ${name}`
+  Callback(message)
 }
-
-greetUser("Edwin", (message) => {
+greetUser("kirika", (message)) {
   console.log(message)
-})
+}
