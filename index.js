@@ -460,10 +460,10 @@ console.log(quadruple(6))
 console.log(quintuple(6))
 
 //callback 
-function greetUser(name, message) {
-  const message =  `Hello + ${name}`
-  Callback(message)
+function greetUser(name, callback) {
+  const message = `Hello ${name}`
+  callback(message)
 }
-greetUser("kirika", (message)) {
+greetUser("Edwin", (message) => {
   console.log(message)
-}
+})
