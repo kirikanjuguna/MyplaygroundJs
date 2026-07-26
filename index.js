@@ -461,9 +461,10 @@ console.log(quintuple(6))
 
 //callback 
 function greetUser(name, callback) {
-  const message = `Hello ${name}`
-  callback(message)
+ const message = `Hello ${name}`
+ callback(message)
 }
+
 greetUser("Edwin", (message) => {
   console.log(message)
 })
