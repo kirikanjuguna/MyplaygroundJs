@@ -468,3 +468,12 @@ function greetUser(name, callback) {
 greetUser("Edwin", (message) => {
   console.log(message)
 })
+
+//didn't understand the timer callbacks but i used ai to understand assynchronous and synchronous very well now lemme rewrite that
+//Callback with timer
+console.log("first")
+setTimeout(() => {
+  console.log("Fourth - to print after 2 seconds")
+},2000)
+console.log("second")
+console.log("third")
