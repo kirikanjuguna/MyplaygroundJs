@@ -479,16 +479,16 @@ console.log("second")
 console.log("third")
 
 //Next putting it together
-function processUsers(callbackName, callback) {
-  callback(callbackUsers.map)
+//i'll use cb to stand for call back to differenciate everything for instance users here and users before 
+function processUsers(cbUsers, callback) {
+  return cbUsers.map(callback)
 }
 
-const callbackUsers = [
-  {callbackName: "Alice", callbackAge: 25},
-  {callbackName: "Bob", callbackAge: 30},
-  {callbackName: "Charlie", callbackAge: 35}
+const cbUsers = [
+  {cbName: "Alice", cbAge: 25},
+  {cbName: "Bob", cbAge: 30},
+  {cbName: "Charlie", cbAge: 35}
 ]
 
-processUsers(callbackName, NewUserList => callbackUsers.callbackName) {
-  console.log(NewUserList),
-}
+const cbUserNames = processUsers(cbUsers, cbUser=>cbUser.cbName)
+console.log(cbUserNames)
