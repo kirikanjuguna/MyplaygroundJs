@@ -477,3 +477,18 @@ setTimeout(() => {
 },2000)
 console.log("second")
 console.log("third")
+
+//Next putting it together
+function processUsers(callbackName, callback) {
+  callback(callbackUsers.map)
+}
+
+const callbackUsers = [
+  {callbackName: "Alice", callbackAge: 25},
+  {callbackName: "Bob", callbackAge: 30},
+  {callbackName: "Charlie", callbackAge: 35}
+]
+
+processUsers(callbackName, NewUserList => callbackUsers.callbackName) {
+  console.log(NewUserList),
+}
