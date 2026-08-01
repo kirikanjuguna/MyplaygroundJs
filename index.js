@@ -492,3 +492,17 @@ const cbUsers = [
 
 const cbUserNames = processUsers(cbUsers, cbUser=>cbUser.cbName)
 console.log(cbUserNames)
+
+
+//lemme just repeat this to play around and try to show both name and age without looking somewhere else
+function secondProcessUsers(secondCbUsers, callback) {
+  return secondCbUsers.map(callback)
+}
+const secondCbUsers = [
+  {cbName: "David", cbAge: 40},
+  {cbName: "Eva", cbAge: 45},
+  {cbName: "Frank", cbAge: 50}
+]
+
+const SecondUserDetails = secondProcessUsers(secondCbUsers, secondCbUser=>({Name: secondCbUser.cbName, Age: secondCbUser.cbAge}))
+console.log(SecondUserDetails)
