@@ -403,7 +403,7 @@ console.log(person.getName())
 //Day 5: How Functions Really Work — Closures & Callbacks
 /*function makeCounter(){
   let count = 0
-  return function(){ //i travelled home and i'm writing this from i really don't understand this code 
+  return function(){ //i travelled home and i'm writing this from home i really don't understand this code 
     count ++
     return count
   }
@@ -506,3 +506,25 @@ const secondCbUsers = [
 
 const SecondUserDetails = secondProcessUsers(secondCbUsers, secondCbUser=>({Name: secondCbUser.cbName, Age: secondCbUser.cbAge}))
 console.log(SecondUserDetails)
+
+
+////Day 5 Exercise — new file: day5.js
+////No notes. No looking back. Run with node day5.js
+
+  ///Part A — closures
+//1.Write a function makeGreeter that takes a greeting parameter and returns a new function that takes a name and returns the full greeting. So makeGreeter("Hello")("Edwin") returns "Hello, Edwin". Create two greeters — one for "Hello" and one for "Hey" — and test both.
+
+//2.Write a function makeCounter that returns an object with two methods:increment (adds 1) and getCount (returns current count). Both should share the same closed-over count variable. Test that calling increment multiple times actually changes what getCount returns.
+
+  ///Part B — callbacks
+//3.Write a function applyToAll that takes an array and a callback, and returns a new array with the callback applied to each item. Test it with numbers and a doubling function. Do NOT use the built-in .map()— write the loop yourself inside applyToAll.
+
+//4.Write a function runLater that takes a message and a delay in milliseconds, and logs the message after that delay using setTimeout. Call it twice with different messages and different delays. Notice the order they print.
+
+///Part C — combine
+//5.Write a function filterAndTransform that takes an array, a filter callback, and a transform callback. It should first filter the array, then map the result. Test it on an array of numbers: filter for numbers over 5, then double each one.
+
+  /////**Task 2 is the most important. If increment and getCount truly share the same count, you've understood closures. If they don't, re-read the makeCounter example above.
+
+////Bonus — closure with memory
+//★ Write a function makeMultiplier that takes a factor and returns a function that multiplies any number by that factor. Create double, triple, and times10 from it. This should be 4 lines total.
