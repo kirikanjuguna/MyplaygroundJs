@@ -513,6 +513,9 @@ console.log(SecondUserDetails)
 
   ///Part A — closures
 //1.Write a function makeGreeter that takes a greeting parameter and returns a new function that takes a name and returns the full greeting. So makeGreeter("Hello")("Edwin") returns "Hello, Edwin". Create two greeters — one for "Hello" and one for "Hey" — and test both.
+function makeGreeter(greeting){
+  
+}
 
 //2.Write a function makeCounter that returns an object with two methods:increment (adds 1) and getCount (returns current count). Both should share the same closed-over count variable. Test that calling increment multiple times actually changes what getCount returns.
 
