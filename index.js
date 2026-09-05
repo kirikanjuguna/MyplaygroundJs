@@ -530,18 +530,3 @@ console.log(SecondUserDetails)
 ////Bonus — closure with memory
 //★ Write a function makeMultiplier that takes a factor and returns a function that multiplies any number by that factor. Create double, triple, and times10 from it. This should be 4 lines total.
 
-//Closure Practice
-function human(name){
-  function sayHello(){
-    console.log(`Hello I'm ${name}`)
-  }
-  function sayFeeling(){
-    console.log(`And i'm feeling good`)
-  }
-  sayHello()
-  sayFeeling()
-}
-
-const Maddison = human("James Madisson")
-const Sarr = human("Pape Sarr")
-const Mbappe = human("Kylian Mbappe")
