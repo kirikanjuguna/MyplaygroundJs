@@ -530,3 +530,8 @@ console.log(SecondUserDetails)
 ////Bonus — closure with memory
 //★ Write a function makeMultiplier that takes a factor and returns a function that multiplies any number by that factor. Create double, triple, and times10 from it. This should be 4 lines total.
 
+findDuplicates([1, 2, 3, 2, 4, 5, 1]) 
+// should return [1, 2] (order doesn't matter)
+function findDuplicates(arr){
+  
+}
