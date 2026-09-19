@@ -530,8 +530,45 @@ console.log(SecondUserDetails)
 ////Bonus — closure with memory
 //★ Write a function makeMultiplier that takes a factor and returns a function that multiplies any number by that factor. Create double, triple, and times10 from it. This should be 4 lines total.
 
-findDuplicates([1, 2, 3, 2, 4, 5, 1]) 
-// should return [1, 2] (order doesn't matter)
-function findDuplicates(arr){
-  
+function Bouncer(guestAge, guestName) {
+  return (guestAge >= 18) ? `Welcome to the club ${guestName}, You are of age` : `Sorry ${guestName} ,you are not of age`
 }
+
+Boni = Bouncer(20,"Boniface")
+console.log(Boni)
+
+
+function greetGuest(guestName="Guest") {
+  return `Hello ${guestName}, welcome to the party!`;
+}
+console.log(greetGuest("Edwin"));
+console.log(greetGuest());
+
+Marty = Bouncer(15,"Marty")
+console.log(Marty);
+
+
+const hotelLocations= [ "Nairobi", "Los Angeles", "Berlin"]
+form = hotelLocations[2]
+ngapi = hotelLocations.length
+console.log(form);
+console.log(ngapi);
+hotelLocations.push("Kigali")
+hotelLocations.pop()
+hotelLocations.unshift("Kigali")
+hotelLocations.shift()
+console.log(hotelLocations);
+
+const guestRooms = [101, 102, 103];
+for (let i=0; i< guestRooms.length; i++) {
+  console.log(guestRooms[i]);
+}
+
+for (const hotelLocation of hotelLocations) {
+  console.log(hotelLocation);
+}
+
+const guestRoomsDouble = guestRooms.map(roomNumber => roomNumber *2)
+console.log(guestRoomsDouble);
+
+const guestRoomsWithThree = guestRooms.filter()
