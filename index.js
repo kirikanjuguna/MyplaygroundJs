@@ -571,4 +571,5 @@ for (const hotelLocation of hotelLocations) {
 const guestRoomsDouble = guestRooms.map(roomNumber => roomNumber *2)
 console.log(guestRoomsDouble);
 
-const guestRoomsWithThree = guestRooms.filter()
+const guestRoomsWithThree = guestRooms.filter(guestRoom=>guestRoom.toString().includes('3'))
+console.log(guestRoomsWithThree);
