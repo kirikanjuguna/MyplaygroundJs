@@ -585,11 +585,9 @@ const letsSee = latestCounter()
 console.log(letsSee())
 console.log(letsSee())
 
-//Repeat of Multiplier factory
-function latestMultiplier(factor){
-  return (number) => number*factor
+//Again Repeat of Multiplier factory
+function latestMuliplier(factor){
+  return number => number * factor
 }
-const latestdouble = latestMultiplier(2)
-console.log(latestdouble(10))
-const latestTriple = latestMultiplier(3)
-console.log(latestTriple(10))
+const latestDouble = latestMuliplier(2)
+console.log(latestDouble(5))
