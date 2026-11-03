@@ -591,3 +591,18 @@ function latestMuliplier(factor){
 }
 const latestDouble = latestMuliplier(2)
 console.log(latestDouble(5))
+const latestTripple = latestMuliplier(3)
+console.log(latestTripple(6))
+
+//makeGreeterFactory
+function makeGreeterFactory(greeting){
+  return (greeteename) => `${greeting}, ${greeteename}!`
+}
+
+const hey = makeGreeterFactory("Hey")
+const hello = makeGreeterFactory("Hello")
+const checkingOn = makeGreeterFactory("How are you doing?")
+
+console.log(hey("Edwin"))
+console.log(hello("Alice"))
+console.log(checkingOn("Bob"))
