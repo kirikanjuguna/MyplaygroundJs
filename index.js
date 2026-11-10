@@ -459,6 +459,8 @@ console.log(newTriple(6))
 console.log(quadruple(6))
 console.log(quintuple(6))
 
+
+console.log("//Where callbacks start")
 //callback 
 function greetUser(name, callback) {
  const message = `Hello ${name}`
@@ -606,3 +608,4 @@ const checkingOn = makeGreeterFactory("How are you doing?")
 console.log(hey("Edwin"))
 console.log(hello("Alice"))
 console.log(checkingOn("Bob"))
+
