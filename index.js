@@ -609,3 +609,9 @@ console.log(hey("Edwin"))
 console.log(hello("Alice"))
 console.log(checkingOn("Bob"))
 
+//greeter with callback
+function greetUser(name, callback){
+  const greeting = `Hello ${name}, welcome to the party!`;
+  callback(greeting);
+}
+
