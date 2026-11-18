@@ -610,8 +610,13 @@ console.log(hello("Alice"))
 console.log(checkingOn("Bob"))
 
 //greeter with callback
-function greetUser(name, callback){
-  const greeting = `Hello ${name}, welcome to the party!`;
-  callback(greeting);
+function greetPontUser(name, callback){
+  const message = `${"Guten Abend"}, ${name}`
+  callback(message)
 }
 
+greetPontUser("Edwin", (msg) => {
+  console.log(msg)
+})
+
+//revising callbacks with timers
